@@ -11,8 +11,8 @@ file_path_file = "file_path.txt"
 def run():
 	global param1, param2
 	st_lis = re.split('(\w+.\w+)$', sys.argv[0])
-
-	os.chdir(st_lis[0])
+	path = os.path.normpath(st_lis[0])
+	os.chdir(path)
 	print(st_lis[0])
 	with open(file_path_file, 'w+') as file_ob:
 		file_ob.write(file_path)
