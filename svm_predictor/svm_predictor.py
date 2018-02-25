@@ -1,17 +1,24 @@
 #svm_predictor.py
 import csv
+import re
 import numpy as np
 from sklearn.svm import SVR
 import matplotlib.pyplot as plt
 import pickle
 import os
 import copy
+import xlrd
+import xlsx2csv
+import csv
+
+file_path_file = "./file_path.txt"
 log_st = ""
 def get_data(filename, last_x = 75, front_days= 15, price_ind = 2):
 	dates = []
 	prices = []
 	test_dates = []
 	test_prices = []
+
 	with open(filename, 'r') as csvfile:
 		csvFileReader = csv.reader(csvfile)
 		next(csvFileReader)
@@ -26,6 +33,11 @@ def get_data(filename, last_x = 75, front_days= 15, price_ind = 2):
 		for row in csvFileReader:
 			if row[1] is not '' and row[price_ind]:
 				l = row[1].split('/')
+				if len(l)<3:
+					l = row[1].split('-')
+					if len(l) < 3:
+						print("wrong date format")
+						exit(2)
 				for ind in range(len(l)):
 					item = l[ind]
 					if len(item)==1:
@@ -162,12 +174,24 @@ def main_result(price_ind, mod_num):
 	#p = test(predicted_price)
 def main_graph():
 	import sys
-
+	global file_path_file
 	last_x = int(sys.argv[1])
 	front_days = int(sys.argv[2])
 	price_ind = int(sys.argv[3])
-	data_set = sys.argv[4]
+	with open(file_path_file, 'r+') as file_ob:
+		data_set = file_ob.read().rstrip().lstrip()
+
+	#data_set = sys.argv[4]
 	print(data_set, type(data_set))
+	st_lis = re.split('(\w+).(\w+)$', data_set)
+	if (st_lis[2] == 'xlsx' ):
+		obj = xlsx2csv.Xlsx2csv(data_set)
+		str_lis = re.split('(\w+).\w+$', data_set)
+		obj.convert(str_lis[0] + 'converted_' + str_lis[1] + '.csv')
+		data_set = str_lis[0] + 'converted_' + str_lis[1] + '.csv'
+	elif (st_lis[2] != 'csv' ):
+		print("The file must be xlsx or csv type")
+		exit(1)
 	dates, prices, test_dates, test_prices=get_data(data_set, last_x=last_x, front_days = front_days, price_ind = price_ind)
 	predicted_price = predict_prices(dates, prices, front_days = front_days, last_x=last_x,  price_ind = price_ind)
 	test_dates_num = np.arange(len(test_dates))

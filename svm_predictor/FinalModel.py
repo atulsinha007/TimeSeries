@@ -1,36 +1,47 @@
 from tkinter import *
 from tkinter import filedialog
 import math
+import xlrd
+import csv
 import os
 file_path = "WMA.csv"
-
+import re
+file_path_file = "file_path.txt"
 
 def run():
-    global param1, param2
+	global param1, param2
+	st_lis = re.split('(\w+.\w+)$', sys.argv[0])
 
-    os.system('python svm_predictor.py 75 '+str(param1.get())+ ' ' + str(int(param2.get())+2) +' '+ file_path)
+
+	#print(sys.argv[0])
+	os.chdir(st_lis[0])
+	print(st_lis[0])
+	with open(file_path_file, 'w+') as file_ob:
+		file_ob.write(file_path)
+	os.system("pwd")
+	os.system('/usr/local/bin/python3 svm_predictor.py 75 '+str(param1.get())+ ' ' + str(int(param2.get())+2))
 
 
 def browse():
 
-    root = Tk()
-    root.withdraw()
-    file = filedialog.askopenfile(parent=root, mode='rb', title='Choose a file')
-    print(file.name)
-    if file is not None:
-        data = file.read()
-        file.close()
-    # print("I got %d bytes from this file." % len(data))
-    else:
-        print("invalid file")
-    global file_path
-    file_path = str(file.name)
-    print(type(file_path))
+	root = Tk()
+	root.withdraw()
+	file = filedialog.askopenfile(parent=root, mode='rb', title='Choose a file')
+	print(file.name)
+	if file is not None:
+		data = file.read()
+		file.close()
+	# print("I got %d bytes from this file." % len(data))
+	else:
+		print("invalid file")
+	global file_path
+	file_path = str(file.name)
+	print(type(file_path))
 
 
 def quit():
-    root.destroy()
-    exit(1)
+	root.destroy()
+	exit(1)
 
 
 root = Tk()
