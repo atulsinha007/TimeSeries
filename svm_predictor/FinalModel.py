@@ -12,14 +12,12 @@ def run():
 	global param1, param2
 	st_lis = re.split('(\w+.\w+)$', sys.argv[0])
 
-
-	#print(sys.argv[0])
 	os.chdir(st_lis[0])
 	print(st_lis[0])
 	with open(file_path_file, 'w+') as file_ob:
 		file_ob.write(file_path)
-	os.system("pwd")
-	os.system('/usr/local/bin/python3 svm_predictor.py 75 '+str(param1.get())+ ' ' + str(int(param2.get())+2))
+	# os.system("pwd")
+	os.system('python svm_predictor.py 75 '+str(param1.get())+ ' ' + str(int(param2.get())+2))
 
 
 def browse():
@@ -31,7 +29,6 @@ def browse():
 	if file is not None:
 		data = file.read()
 		file.close()
-	# print("I got %d bytes from this file." % len(data))
 	else:
 		print("invalid file")
 	global file_path
@@ -55,7 +52,6 @@ font = 'times 18 bold'
 hwtext = Label(hwframe, text='SVM Model', font=font)
 hwtext.pack(side='top', pady=20)
 
-
 rframe = Frame(top)
 rframe.pack(side='top', padx=10, pady=20)
 
@@ -73,9 +69,6 @@ param_2.set(0)
 
 param1 = Entry(rframe, textvariable=param_1)
 param2 = Entry(rframe, textvariable=param_2)
-
-# dum1 = Label(rframe, text="           ")
-# dum1.grid(row=0, column=1, sticky=E)
 
 param1.grid(row=0, column=1, sticky=E, padx=40)
 param2.grid(row=1, column=1, sticky=E, padx=40)
