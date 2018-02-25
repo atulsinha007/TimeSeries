@@ -1,23 +1,26 @@
 from tkinter import *
 from tkinter import filedialog
 import math
-import xlrd
 import csv
 import os
 file_path = "WMA.csv"
 import re
 file_path_file = "file_path.txt"
-
+#import dummy
 def run():
 	global param1, param2
 	st_lis = re.split('(\w+.\w+)$', sys.argv[0])
 
-	os.chdir(st_lis[0])
+
+	os.system('pwd')
+	if st_lis[0] is not '':
+		os.chdir(st_lis[0])
 	print(st_lis[0])
 	with open(file_path_file, 'w+') as file_ob:
 		file_ob.write(file_path)
-	# os.system("pwd")
-	os.system('python svm_predictor.py 75 '+str(param1.get())+ ' ' + str(int(param2.get())+2))
+	os.system("pwd")
+	os.system('../vENV/bin/python3 svm_predictor.py 75 '+str(param1.get())+ ' ' + str(int(param2.get())+2))
+
 
 
 def browse():

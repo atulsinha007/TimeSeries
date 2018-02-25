@@ -3,6 +3,8 @@ import csv
 import re
 import numpy as np
 from sklearn.svm import SVR
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import pickle
 import os

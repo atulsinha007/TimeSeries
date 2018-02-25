@@ -1,2 +1,4 @@
 #!/bin/bash
-python3 ~/Downloads/svm_predictor/FinalModel.py
+dir_path=`dirname $0`
+cd $dir_path
+../vENV/bin/python3 FinalModel.py
