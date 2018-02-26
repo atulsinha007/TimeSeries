@@ -12,15 +12,15 @@ def run():
 	st_lis = re.split('(\w+.\w+)$', sys.argv[0])
 
 
-	os.system('cd')
+	os.system('pwd')
 	if st_lis[0] is not '':
 		os.chdir(st_lis[0])
 	print(st_lis[0])
 	with open(file_path_file, 'w+') as file_ob:
 		file_ob.write(file_path)
-	os.system("cd")
-	os.system('cd ..\\vENV\\bin\\')
-	os.system('python svm_predictor.py 75 '+str(param1.get())+ ' ' + str(int(param2.get())+2))
+	os.system("pwd")
+	os.system('../vENV/bin/python3 svm_predictor.py 75 '+str(param1.get())+ ' ' + str(int(param2.get())+2))
+
 
 
 def browse():
