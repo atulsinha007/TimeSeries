@@ -210,11 +210,9 @@ def main_graph():
 
 
 
-def main():
+def main(last_x, front_days, price_ind):
 	import sys
-	last_x = int(sys.argv[1])
-	front_days = int(sys.argv[2])
-	price_ind = int(sys.argv[3])
+
 	dates, prices, test_dates, test_prices=get_data('WMA.csv', last_x=last_x, front_days = front_days, price_ind = price_ind)
 	predicted_price = predict_prices(dates, prices, front_days = front_days, last_x=last_x,  price_ind = price_ind)
 	#print(predicted_price)

@@ -3,24 +3,32 @@ from tkinter import filedialog
 import math
 import csv
 import os
-file_path = "WMA.csv"
 import re
+
+from svm_predictor import main
+
+file_path = "WMA.csv"
 file_path_file = "file_path.txt"
 #import dummy
 def run():
 	global param1, param2
 	st_lis = re.split('(\w+.\w+)$', sys.argv[0])
 
-
+	path = os.path.normpath(st_lis[0])
 	os.system('pwd')
-	if st_lis[0] is not '':
-		os.chdir(st_lis[0])
+
+	if path is not '':
+		os.chdir(path)
+		
 	print(st_lis[0])
 	with open(file_path_file, 'w+') as file_ob:
 		file_ob.write(file_path)
 	os.system("pwd")
-	os.system('../vENV/bin/python3 svm_predictor.py 75 '+str(param1.get())+ ' ' + str(int(param2.get())+2))
 
+	last_x = 75
+	front_days = int(param1.get())
+	price_ind = int(param2.get() + 2)
+	main(last_x, front_days, price_ind)
 
 
 def browse():
