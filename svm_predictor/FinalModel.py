@@ -27,7 +27,7 @@ def run():
 
 	last_x = 75
 	front_days = int(param1.get())
-	price_ind = int(param2.get() + 2)
+	price_ind = int(param2.get()) + 2
 	main(last_x, front_days, price_ind)
 
 
