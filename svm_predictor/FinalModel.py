@@ -20,7 +20,7 @@ def run():
 		file_ob.write(file_path)
 
 	#os.system('cd ..\\vENV\\bin\\')
-	os.system('..\\vENV\\bin\\python3 svm_predictor.py 75 '+str(param1.get())+ ' ' + str(int(param2.get())+2))
+	os.system('python3 svm_predictor.py 75 '+str(param1.get())+ ' ' + str(int(param2.get())+2))
 
 
 def browse():
