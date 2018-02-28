@@ -21,9 +21,14 @@ def run():
 
 	#os.system('cd ..\\vENV\\bin\\')
 	try:
-		os.system('python3 svm_predictor.py 75 '+str(param1.get())+ ' ' + str(int(param2.get())+2))
-	except:
-		os.system('python svm_predictor.py 75 '+str(param1.get())+ ' ' + str(int(param2.get())+2))
+		r = os.system('python3 svm_predictor.py 75 '+str(param1.get())+ ' ' + str(int(param2.get())+2))
+		if r:
+			os.system(
+				'python svm_predictor.py 75 ' + str(param1.get()) + ' ' + str(int(param2.get()) + 2))
+
+	except OSError:
+		print("upgrade python")
+		exit(-1)
 
 def browse():
 
