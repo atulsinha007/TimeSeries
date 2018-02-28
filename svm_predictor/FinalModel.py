@@ -24,7 +24,7 @@ def run():
 		r = os.system('python3 svm_predictor.py 75 '+str(param1.get())+ ' ' + str(int(param2.get())+2))
 		if r:
 			os.system(
-				'python svm_predictor.py 75 ' + str(param1.get()) + ' ' + str(int(param2.get()) + 2))
+				'/usr/local/bin/python3 svm_predictor.py 75 ' + str(param1.get()) + ' ' + str(int(param2.get()) + 2))
 
 	except OSError:
 		print("upgrade python")
