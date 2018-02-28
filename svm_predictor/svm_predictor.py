@@ -10,7 +10,7 @@ import pickle
 import os
 import copy
 import xlrd
-import xlsx2csv
+import xlsx2csv_m
 import csv
 
 file_path_file = "./file_path.txt"
@@ -187,7 +187,7 @@ def main_graph():
 	print(data_set, type(data_set))
 	st_lis = re.split('(\w+).(\w+)$', data_set)
 	if (st_lis[2] == 'xlsx' ):
-		obj = xlsx2csv.Xlsx2csv(data_set)
+		obj = xlsx2csv_m.Xlsx2csv(data_set)
 		str_lis = re.split('(\w+).\w+$', data_set)
 		obj.convert(str_lis[0] + 'converted_' + str_lis[1] + '.csv')
 		data_set = str_lis[0] + 'converted_' + str_lis[1] + '.csv'
