@@ -21,11 +21,13 @@ def run():
 
 	#os.system('cd ..\\vENV\\bin\\')
 	try:
-		r = os.system('python3 svm_predictor.py 75 '+str(param1.get())+ ' ' + str(int(param2.get())+2))
+		r = os.system('python svm_predictor.py 75 '+str(param1.get())+ ' ' + str(int(param2.get())+2))
 		if r:
-			os.system(
-				'/usr/local/bin/python3 svm_predictor.py 75 ' + str(param1.get()) + ' ' + str(int(param2.get()) + 2))
-
+			q = os.system(
+				'python3 svm_predictor.py 75 ' + str(param1.get()) + ' ' + str(int(param2.get()) + 2))
+			if q:
+				print("upgrade python or if already there alias it with one of python or python3")
+				exit(-1)
 	except OSError:
 		print("upgrade python")
 		exit(-1)

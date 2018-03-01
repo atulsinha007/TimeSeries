@@ -198,7 +198,7 @@ def main_graph():
 	predicted_price = predict_prices(dates, prices, front_days = front_days, last_x=last_x,  price_ind = price_ind)
 	test_dates_num = np.arange(len(test_dates))
 	plt.plot(test_dates_num, test_prices, color = 'red', label = 'Data')
-	plt.plot(test_dates_num, predicted_price[:,0], color = 'black', label = 'RBF_model')
+	plt.plot(test_dates_num, predicted_price[:, 2], color = 'black', label = 'Poly_model')
 	plt.xlabel('Date')
 	plt.ylabel('Price')
 	plt.title('Support Vector Machine')
