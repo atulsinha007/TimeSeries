@@ -25,17 +25,17 @@ with open(file_path_file, 'r+') as file_ob:
 with open(sheet_file, 'r+') as file_ob:
         sheet = file_ob.read().rstrip().lstrip()
         if sheet:
-        	sheet_id = int(sheet)
+            sheet_id = int(sheet)
         else:
-        	sheet_id = 1
+            sheet_id = 1
 #data_set = sys.argv[4]
 print(data_set, type(data_set))
 st_lis = re.split('(\w+).(\w+)$', data_set)
 if (st_lis[2] == 'xlsx' ):
     obj = xlsx2csv_m.Xlsx2csv(data_set)
     str_lis = re.split('(\w+).\w+$', data_set)
-    obj.convert(str_lis[0] + 'converted_' + str_lis[1]+'_'+sheet_id + '.csv', sheetid = sheet_id)
-    data_set = str_lis[0] + 'converted_' + str_lis[1]+'_'+sheet_id + '.csv'
+    obj.convert(str_lis[0] + 'converted_' + str_lis[1]+'_sheet_'+str(sheet_id) + '.csv', sheetid = sheet_id)
+    data_set = str_lis[0] + 'converted_' + str_lis[1]+'_sheet_'+str(sheet_id) + '.csv'
     print(data_set)
 elif (st_lis[2] != 'csv' ):
     print("The file must be xlsx or csv type")
@@ -81,7 +81,7 @@ def standardize_dataset(traindata):
                 row[i]/=stdevs[i]
     return traindata, means, stdevs
 
-def get_data(filename, last_x = 75, front_days= 15, price_ind = 2,):
+def get_data(filename, last_x = 'all', front_days= 15, price_ind = 0, train_ratio = 0.0):
     dates = []
     prices = []
     test_dates = []
@@ -99,10 +99,10 @@ def get_data(filename, last_x = 75, front_days= 15, price_ind = 2,):
 
         for row in csvFileReader:
             #print(row)
-            if row[1] is not '' and row[price_ind]:
+            if row[1] is not '' and row[price_ind+2] and re.match('\d*\.\d+',row[price_ind+2]):
                 m = re.match('((\d*[/-])*\d+).*', row[1])
                 stri = m.group(1)
-                print(stri)
+                #print("eh"+stri+"he")
                 l = stri.split('/')
                 if len(l)<3:
                     l = stri.split('-')
@@ -117,9 +117,9 @@ def get_data(filename, last_x = 75, front_days= 15, price_ind = 2,):
                 l = [l[2]]+[l[0]]+[l[1]]
                 dbg = ''.join(l)
                 try:
-                    prices.append(float(row[price_ind]))
+                    prices.append(float(row[price_ind+2]))
                     dates.append(int(''.join(l)))
-                    print(stri)
+                    #print(stri)
                 except ValueError as err:
 
                     print(err)
@@ -131,12 +131,31 @@ def get_data(filename, last_x = 75, front_days= 15, price_ind = 2,):
         num_lis.sort(key=lambda x: dates[x])
         dates = [ dates[i] for i in range(len(num_lis))]
         prices = [ prices[i] for i in range(len(num_lis))]
-        test_dates = dates[-front_days:]
-        test_prices = prices[-front_days:]
+        #print(len(dates))
 
-        dates = dates[-last_x-front_days: -front_days]
-        prices = prices[ -last_x-front_days: -front_days]
-        print(len(dates))
+        if train_ratio:
+            n = int(len(dates)*train_ratio)
+
+            test_dates = dates[n:]
+            test_prices = prices[n:]
+            dates = dates[:n]
+            prices = prices[:n]
+            global hen
+            hen = n
+        elif last_x != 'all':
+            test_dates = dates[-front_days:]
+            test_prices = prices[-front_days:]
+            dates = dates[-last_x-front_days: -front_days]
+            prices = prices[ -last_x-front_days: -front_days]
+
+        else:
+            test_dates = dates[-front_days:]
+            test_prices = prices[-front_days:]
+            dates = dates[: -front_days]
+            prices = prices[: -front_days]
+            print("here", len(dates))
+        #print(len(dates))
+        #print( len(test_dates), len(test_prices))
     return dates, prices, test_dates, test_prices
 
 
@@ -151,7 +170,7 @@ def test(predicted_price, test_dates, test_prices):
 
     return err
 
-def predict_prices(dates, prices, front_days = 15, last_x = 75, price_ind = 2):
+def predict_prices(dates, prices, front_days = 15, last_x = 'all', price_ind = 0):
     dates = copy.deepcopy(dates)
     dates = np.reshape( dates, (len(dates), 1))
 
@@ -159,15 +178,15 @@ def predict_prices(dates, prices, front_days = 15, last_x = 75, price_ind = 2):
     dates_num = [i for i in range(len(dates))]
     dates_num_ar = np.array(dates_num)
     dates_num_ar = dates_num_ar.reshape((dates_num_ar.shape[0], 1))
-    if not os.path.isfile("./" + "pickle_jar/svrs_"+str(last_x)+"_"+str(price_ind)+".pickle"):
+    if not os.path.isfile("./" + "pickle_jar/svrs_"+str(last_x)+"_"+str(price_ind)+'_sheet_'+str(sheet_id)+".pickle"):
         rf_obj =  RandomForestRegressor(n_estimators=100, n_jobs=-1)
         rf_obj = rf_obj.fit(dates_num_ar, prices)
-        fs = open( "./" + "pickle_jar/rf_"+str(last_x)+"_"+str(price_ind)+".pickle", "wb")
+        fs = open( "./" + "pickle_jar/rf_"+str(last_x)+"_"+str(price_ind)+'_sheet_'+str(sheet_id)+".pickle", "wb")
         
         pickle.dump( rf_obj , fs)
         fs.close()
     else:
-        fs = open("./" + "pickle_jar/rf_" + str(last_x) + "_" + str(price_ind) + ".pickle", "rb")
+        fs = open("./" + "pickle_jar/rf_" + str(last_x) + "_" + str(price_ind) +'_sheet_'+str(sheet_id)+ ".pickle", "rb")
 
         tup = pickle.load( fs)
         rf_obj = tup
@@ -186,10 +205,10 @@ def predict_prices(dates, prices, front_days = 15, last_x = 75, price_ind = 2):
         lis.append( rf_obj.predict(last_x+i))
 
     q = np.array(lis)
-    fileo = open("./log_folder/log_predictions_price_ind_" + str(price_ind) + "_last_days_"+str(last_x)+ "_front_days_" + str(front_days) + ".csv", "w+")
+    fileo = open("./log_folder/log_predictions_price_ind_" + str(price_ind) + "_last_days_"+str(last_x)+ "_front_days_" + str(front_days)+'_sheet_'+str(sheet_id) + ".csv", "w+")
     st = ""
     global log_st
-    log_st = "./log_folder/log_predictions_price_ind_" + str(price_ind)+"_last_days_"+str(last_x)+ "_front_days_" + str(front_days) + ".csv"
+    log_st = "./log_folder/log_predictions_price_ind_" + str(price_ind)+"_last_days_"+str(last_x)+ "_front_days_" + str(front_days) +'_sheet_'+str(sheet_id)+ ".csv"
     for row in q:
         for col in row:
             st+=","+str(col)+" "
@@ -198,41 +217,55 @@ def predict_prices(dates, prices, front_days = 15, last_x = 75, price_ind = 2):
     fileo.close()
     return q
 
-def main_result(price_ind):
+def main_result():
 
     lish = []
-    last_x_list = [200, 225, 240]
-    front_days_list = [1, 2, 3, 5, 15]
-    global data_set
-    for last_x in last_x_list:
-        lis = []
-        for front_days in front_days_list:
 
-            dates, prices, test_dates, test_prices = get_data(data_set, last_x=last_x, front_days=front_days, price_ind=price_ind)
+    train_ratio_lis = [0.85,0.86,0.87,0.88,0.89,0.90]
+    global data_set, hen
+    for price_ind in range(5):
+        lis = []
+        for train_ratio in train_ratio_lis:
+
+            dates, prices, test_dates, test_prices = get_data(data_set,   price_ind=price_ind, train_ratio = train_ratio)
+            print("here", len(test_prices))
             dates = np.reshape(dates, (len(dates), 1))
 
             dates_num = [i for i in range(len(dates))]
             dates_num_ar = np.array(dates_num)
             dates_num_ar = dates_num_ar.reshape((dates_num_ar.shape[0], 1))
-            fs = open("./" + "pickle_jar/rf_" + str(last_x) + "_" + str(price_ind) + ".pickle", "rb")
+            if not os.path.isfile("./" + "pickle_jar/svrs_" + str(hen) + "_" + str(price_ind) + '_sheet_' + str(
+                    sheet_id) + ".pickle"):
+                rf_obj = RandomForestRegressor(n_estimators=100, n_jobs=-1)
+                rf_obj = rf_obj.fit(dates_num_ar, prices)
+                fs = open("./" + "pickle_jar/rf_" + str(hen) + "_" + str(price_ind) + '_sheet_' + str(
+                    sheet_id) + ".pickle", "wb")
 
-            tup = pickle.load(fs)
-            rf_obj = tup
-            fs.close()
+                pickle.dump(rf_obj, fs)
+                fs.close()
+            else:
+                fs = open("./" + "pickle_jar/rf_" + str(hen) + "_" + str(price_ind) + '_sheet_' + str(
+                    sheet_id) + ".pickle", "rb")
+
+                tup = pickle.load(fs)
+                rf_obj = tup
+                fs.close()
+
 
 
             last_x = len(prices)
-
+            front_days = len(test_prices)
             lisp = []
             for i in range(front_days):
                 # print([svr_rbf.predict(last_x+i), svr_lin.predict(last_x+i), svr_poly.predict(last_x+i) ])
                 lisp.append(rf_obj.predict(last_x+i))
             p = np.array(lisp)
+            print(test_prices.__len__(), p.shape)
             tp = test(p, test_dates, test_prices)
             lis+=[tp]
-        lish.append(lis)
+    lish.append(lis)
     q = np.array(lish)
-    fileo = open("./log_folder/log_error_price_ind_" + str(price_ind) + ".csv", "w+")
+    fileo = open("./log_folder/log_error_"+'_sheet_'+str(sheet_id) + ".csv", "w+")
     st = ""
     for row in q:
         for col in row:
@@ -245,12 +278,12 @@ def main_result(price_ind):
 def main_graph():
     import sys
     global file_path_file
-    last_x = int(sys.argv[1])
-    front_days = int(sys.argv[2])
-    price_ind = int(sys.argv[3])
+    #last_x = int(sys.argv[1])
+    front_days = int(sys.argv[1])
+    price_ind = int(sys.argv[2])
     global data_set
-    dates, prices, test_dates, test_prices=get_data(data_set, last_x=last_x, front_days = front_days, price_ind = price_ind)
-    predicted_price = predict_prices(dates, prices, front_days = front_days, last_x=last_x,  price_ind = price_ind)
+    dates, prices, test_dates, test_prices=get_data(data_set,front_days = front_days, price_ind = price_ind)
+    predicted_price = predict_prices(dates, prices, front_days = front_days,   price_ind = price_ind)
     test_dates_num = np.arange(len(test_dates))
     plt.plot(test_dates_num, test_prices, color = 'red', label = 'Data')
     plt.plot(test_dates_num, predicted_price[:], color = 'black', label = 'randomforest')
@@ -265,14 +298,14 @@ def main_graph():
 
 
 
-def main(last_x, front_days, price_ind):
+def main(last_x = 'all', front_days = 10, price_ind = 0):
     import sys
     global data_set
     dates, prices, test_dates, test_prices=get_data(data_set, last_x=last_x, front_days = front_days, price_ind = price_ind)
     predicted_price = predict_prices(dates, prices, front_days = front_days, last_x=last_x,  price_ind = price_ind)
     #print(predicted_price)
     p = test(predicted_price, test_dates, test_prices)
-    fileo = open("./log_folder/log_"+str(last_x)+"_"+str(front_days)+"_"+str(price_ind)+".txt", "a+")
+    fileo = open("./log_folder/log_"+str(last_x)+"_"+str(front_days)+"_"+str(price_ind)+'_sheet_' + str(sheet_id) +".txt", "a+")
     st = ""
     for i in p:
         st += str(i)+" "
@@ -282,7 +315,7 @@ def main(last_x, front_days, price_ind):
     print(p)
 if __name__ == '__main__':
     t1= time.time()
-    print(main(2002 , 2 ,2))
+    print(main_result())
     t2 = time.time()
     print(t2 - t1)
  
