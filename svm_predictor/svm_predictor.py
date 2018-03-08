@@ -8,6 +8,7 @@ matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import pickle
 import os
+import time
 import copy
 import xlrd
 import xlsx2csv_m
@@ -15,12 +16,21 @@ import csv
 
 file_path_file = "./file_path.txt"
 log_st = ""
+def standardize_dataset(traindata):
+    traindata = np.array(traindata)
+    means= traindata.mean(axis=0)
+
+    stdevs=np.std(traindata,axis=0)
+    traindata = (traindata - means)/stdevs
+    return traindata, means, stdevs
+means = None
+stdevs = None
 def get_data(filename, last_x = 75, front_days= 15, price_ind = 2):
 	dates = []
 	prices = []
 	test_dates = []
 	test_prices = []
-
+	global means, stdevs
 	with open(filename, 'r') as csvfile:
 		csvFileReader = csv.reader(csvfile)
 		next(csvFileReader)
@@ -64,12 +74,13 @@ def get_data(filename, last_x = 75, front_days= 15, price_ind = 2):
 		test_prices = prices[-front_days:]
 		dates = dates[-last_x-front_days: -front_days]
 		prices = prices[ -last_x-front_days: -front_days]
-
+		print(prices, "vs")
+		prices, means, stdevs = standardize_dataset(prices)
+		print(prices)
 	return dates, prices, test_dates, test_prices
 
 
 def test(predicted_price, test_dates, test_prices):
-
 	tp = np.array(test_prices)
 	tp = np.reshape(tp, (tp.shape[0],1))
 
@@ -118,6 +129,10 @@ def predict_prices(dates, prices, front_days = 15, last_x = 75, price_ind = 2):
 		lis.append(np.concatenate((np.concatenate((svr_rbf.predict(last_x+i), svr_lin.predict(last_x+i))), svr_poly.predict(last_x+i)) ))
 
 	q = np.array(lis)
+	print(q)
+	global stdevs, means
+	q = q*stdevs + means
+	print("after", q)
 	fileo = open("./log_folder/log_predictions_price_ind_" + str(price_ind) + "_last_days_"+str(last_x)+ "_front_days_" + str(front_days) + ".csv", "w+")
 	st = ""
 	global log_st
@@ -160,9 +175,12 @@ def main_result(price_ind, mod_num):
 				lisp.append(np.concatenate(
 					(np.concatenate((svr_rbf.predict(last_x + i), svr_lin.predict(last_x + i))), svr_poly.predict(last_x + i))))
 			p = np.array(lisp)
+			global stdevs, means
+			p = p*stdevs + means
 			tp = test(p, test_dates, test_prices)
 			lis+=[tp[mod_num]]
 		lish.append(lis)
+
 	q = np.array(lish)
 	fileo = open("./log_folder/log_error_price_ind_" + str(price_ind) + "_mod_num_" + str(mod_num) + ".csv", "w+")
 	st = ""
@@ -196,6 +214,8 @@ def main_graph():
 		exit(1)
 	dates, prices, test_dates, test_prices=get_data(data_set, last_x=last_x, front_days = front_days, price_ind = price_ind)
 	predicted_price = predict_prices(dates, prices, front_days = front_days, last_x=last_x,  price_ind = price_ind)
+	global stdevs, means
+	#predicted_price = predicted_price*stdevs + means
 	test_dates_num = np.arange(len(test_dates))
 	plt.plot(test_dates_num, test_prices, color = 'red', label = 'Data')
 	plt.plot(test_dates_num, predicted_price[:, 2], color = 'black', label = 'Poly_model')
@@ -226,4 +246,7 @@ def main(last_x, front_days, price_ind):
 	fileo.close()
 	print(p)
 if __name__ == '__main__':
-	print(main_graph())
+	t1 = time.time()
+	print(main(75, 5, 2))
+	t2 = time.time()
+	print(t2-t1)
