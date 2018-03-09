@@ -74,9 +74,11 @@ def get_data(filename, last_x = 75, front_days= 15, price_ind = 2, ):
 
         for row in csvFileReader:
             if row[1] is not '' and row[price_ind]:
-                l = row[1].split('/')
+                m = re.match('((\d*/)*\d+).*', row[1])
+                stri = m.group(1)
+                l = stri.split('/')
                 if len(l)<3:
-                    l = row[1].split('-')
+                    l = stri.split('-')
                     if len(l) < 3:
                         print("wrong date format")
                         exit(2)
@@ -89,7 +91,7 @@ def get_data(filename, last_x = 75, front_days= 15, price_ind = 2, ):
                 try:
                     prices.append(float(row[price_ind]))
                     dates.append(int(''.join(l)))
-                    #print(row[1])
+                    print(stri)
                 except ValueError as err:
 
                     print(err)
@@ -262,7 +264,7 @@ def main(last_x, front_days, price_ind):
     print(p)
 if __name__ == '__main__':
     t1= time.time()
-    print(main(240,2,2))
+    print(main_graph())
     t2 = time.time()
     print(t2 - t1)
  
