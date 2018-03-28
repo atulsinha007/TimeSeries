@@ -73,35 +73,35 @@ model.add(Dense(1))
 model.compile(loss='mean_squared_error', optimizer='adam')
 with open('model_architecture_'+prefix_st+'.json', 'w') as f:
 	f.write(model.to_json())
-datalis=numpy.array(data)
-train_size = int(len(datalis) * 0.90)
-test_size = len(datalis) - train_size
-train, test = datalis[0:train_size,:], datalis[train_size:len(datalis),:]
-trainX, trainY = create_dataset(train, look_back)
-testX, testY = create_dataset(test, look_back)
-temp=copy.deepcopy(testX)
-store=copy.deepcopy(temp)
-print(len(train))
-print(len(test))
 
-a=[test[len(test)-2]]
-b=[test[len(test)-1]]
-store.append(a)
-store.append(b)
-
-trainX1=numpy.array(trainX)
-
-testX1=numpy.array(testX)
-trainY1=numpy.array(trainY)
-testY1=numpy.array(testY)
-store=numpy.array(store)
-
-### reshape input to be [samples, time steps, features]
-trainX1 = numpy.reshape(trainX1, (trainX1.shape[0], 1, trainX1.shape[1]))
-testX1 = numpy.reshape(testX1, (testX1.shape[0], 1, testX1.shape[1]))
 for i in range(nop):
 	
+	datalis=numpy.array(data)
+	train_size = int(len(datalis) * 0.90)
+	test_size = len(datalis) - train_size
+	train, test = datalis[0:train_size,:], datalis[train_size:len(datalis),:]
+	trainX, trainY = create_dataset(train, look_back)
+	testX, testY = create_dataset(test, look_back)
+	temp=copy.deepcopy(testX)
+	store=copy.deepcopy(temp)
+	print(len(train))
+	print(len(test))
 
+	a=[test[len(test)-2]]
+	b=[test[len(test)-1]]
+	store.append(a)
+	store.append(b)
+
+	trainX1=numpy.array(trainX)
+
+	testX1=numpy.array(testX)
+	trainY1=numpy.array(trainY)
+	testY1=numpy.array(testY)
+	store=numpy.array(store)
+
+	### reshape input to be [samples, time steps, features]
+	trainX1 = numpy.reshape(trainX1, (trainX1.shape[0], 1, trainX1.shape[1]))
+	testX1 = numpy.reshape(testX1, (testX1.shape[0], 1, testX1.shape[1]))
 
 	### create and fit the LSTM network
 	
