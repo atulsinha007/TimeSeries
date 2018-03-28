@@ -1,0 +1,4 @@
+Two graphs have been attached for 1 and 10 predicted values.
+Number of epochs are 100.
+Number of predictions can be changed by changing nop value.
+Dataset can also be changed by changing the name of csv file.

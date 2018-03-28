@@ -1,0 +1,1475 @@
+2018-03-28 03:20:47.819683: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-03-28 03:20:50.339498: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1212] Found device 0 with properties: 
+name: Tesla M60 major: 5 minor: 2 memoryClockRate(GHz): 1.1775
+pciBusID: 0000:83:00.0
+totalMemory: 7.93GiB freeMemory: 7.85GiB
+2018-03-28 03:20:50.921698: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1212] Found device 1 with properties: 
+name: Tesla M60 major: 5 minor: 2 memoryClockRate(GHz): 1.1775
+pciBusID: 0000:84:00.0
+totalMemory: 7.93GiB freeMemory: 7.85GiB
+2018-03-28 03:20:50.922036: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1227] Device peer to peer matrix
+2018-03-28 03:20:50.922073: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1233] DMA: 0 1 
+2018-03-28 03:20:50.922083: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1243] 0:   Y Y 
+2018-03-28 03:20:50.922089: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1243] 1:   Y Y 
+2018-03-28 03:20:50.922101: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0, 1
+2018-03-28 03:20:51.505497: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 7585 MB memory) -> physical GPU (device: 0, name: Tesla M60, pci bus id: 0000:83:00.0, compute capability: 5.2)
+2018-03-28 03:20:51.624695: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 7585 MB memory) -> physical GPU (device: 1, name: Tesla M60, pci bus id: 0000:84:00.0, compute capability: 5.2)
+22664
+20397
+2267
+Epoch 1/100
+ - 7s - loss: 0.0047
+Epoch 2/100
+ - 3s - loss: 1.4254e-05
+Epoch 3/100
+ - 3s - loss: 1.2993e-05
+Epoch 4/100
+ - 3s - loss: 1.1503e-05
+Epoch 5/100
+ - 3s - loss: 9.9279e-06
+Epoch 6/100
+ - 3s - loss: 8.4356e-06
+Epoch 7/100
+ - 3s - loss: 7.1728e-06
+Epoch 8/100
+ - 3s - loss: 6.1470e-06
+Epoch 9/100
+ - 3s - loss: 5.3326e-06
+Epoch 10/100
+ - 3s - loss: 5.0989e-06
+Epoch 11/100
+ - 3s - loss: 4.6874e-06
+Epoch 12/100
+ - 3s - loss: 4.7600e-06
+Epoch 13/100
+ - 3s - loss: 4.7847e-06
+Epoch 14/100
+ - 3s - loss: 4.7070e-06
+Epoch 15/100
+ - 3s - loss: 4.9137e-06
+Epoch 16/100
+ - 2s - loss: 4.8943e-06
+Epoch 17/100
+ - 2s - loss: 5.0805e-06
+Epoch 18/100
+ - 2s - loss: 4.8063e-06
+Epoch 19/100
+ - 3s - loss: 4.7602e-06
+Epoch 20/100
+ - 3s - loss: 4.9971e-06
+Epoch 21/100
+ - 3s - loss: 5.0294e-06
+Epoch 22/100
+ - 3s - loss: 4.9949e-06
+Epoch 23/100
+ - 3s - loss: 4.9706e-06
+Epoch 24/100
+ - 2s - loss: 4.8009e-06
+Epoch 25/100
+ - 2s - loss: 4.9332e-06
+Epoch 26/100
+ - 2s - loss: 4.7767e-06
+Epoch 27/100
+ - 2s - loss: 5.1008e-06
+Epoch 28/100
+ - 3s - loss: 4.9213e-06
+Epoch 29/100
+ - 2s - loss: 4.7872e-06
+Epoch 30/100
+ - 3s - loss: 5.0936e-06
+Epoch 31/100
+ - 3s - loss: 4.7747e-06
+Epoch 32/100
+ - 3s - loss: 5.0154e-06
+Epoch 33/100
+ - 2s - loss: 4.9421e-06
+Epoch 34/100
+ - 3s - loss: 4.8151e-06
+Epoch 35/100
+ - 2s - loss: 4.7404e-06
+Epoch 36/100
+ - 2s - loss: 4.8980e-06
+Epoch 37/100
+ - 2s - loss: 5.0127e-06
+Epoch 38/100
+ - 3s - loss: 4.8691e-06
+Epoch 39/100
+ - 2s - loss: 4.8085e-06
+Epoch 40/100
+ - 2s - loss: 5.0779e-06
+Epoch 41/100
+ - 2s - loss: 4.9665e-06
+Epoch 42/100
+ - 2s - loss: 4.7116e-06
+Epoch 43/100
+ - 2s - loss: 4.7338e-06
+Epoch 44/100
+ - 3s - loss: 4.9689e-06
+Epoch 45/100
+ - 2s - loss: 4.7933e-06
+Epoch 46/100
+ - 3s - loss: 5.0012e-06
+Epoch 47/100
+ - 3s - loss: 4.7345e-06
+Epoch 48/100
+ - 3s - loss: 4.9064e-06
+Epoch 49/100
+ - 2s - loss: 4.8770e-06
+Epoch 50/100
+ - 3s - loss: 4.7239e-06
+Epoch 51/100
+ - 2s - loss: 4.8573e-06
+Epoch 52/100
+ - 2s - loss: 4.9117e-06
+Epoch 53/100
+ - 2s - loss: 4.9758e-06
+Epoch 54/100
+ - 2s - loss: 5.1961e-06
+Epoch 55/100
+ - 2s - loss: 4.7405e-06
+Epoch 56/100
+ - 2s - loss: 4.9242e-06
+Epoch 57/100
+ - 2s - loss: 4.8137e-06
+Epoch 58/100
+ - 2s - loss: 4.9543e-06
+Epoch 59/100
+ - 2s - loss: 4.7705e-06
+Epoch 60/100
+ - 2s - loss: 4.9378e-06
+Epoch 61/100
+ - 2s - loss: 4.9146e-06
+Epoch 62/100
+ - 3s - loss: 4.7759e-06
+Epoch 63/100
+ - 2s - loss: 4.9794e-06
+Epoch 64/100
+ - 3s - loss: 5.1702e-06
+Epoch 65/100
+ - 3s - loss: 4.9464e-06
+Epoch 66/100
+ - 2s - loss: 4.7070e-06
+Epoch 67/100
+ - 3s - loss: 4.8659e-06
+Epoch 68/100
+ - 2s - loss: 4.8873e-06
+Epoch 69/100
+ - 3s - loss: 4.7987e-06
+Epoch 70/100
+ - 3s - loss: 4.7794e-06
+Epoch 71/100
+ - 3s - loss: 4.9691e-06
+Epoch 72/100
+ - 2s - loss: 4.8073e-06
+Epoch 73/100
+ - 2s - loss: 5.0272e-06
+Epoch 74/100
+ - 2s - loss: 4.9094e-06
+Epoch 75/100
+ - 2s - loss: 4.8106e-06
+Epoch 76/100
+ - 2s - loss: 5.0936e-06
+Epoch 77/100
+ - 2s - loss: 4.6332e-06
+Epoch 78/100
+ - 3s - loss: 4.9548e-06
+Epoch 79/100
+ - 2s - loss: 4.9757e-06
+Epoch 80/100
+ - 2s - loss: 4.8021e-06
+Epoch 81/100
+ - 3s - loss: 4.8298e-06
+Epoch 82/100
+ - 2s - loss: 4.6892e-06
+Epoch 83/100
+ - 3s - loss: 4.7889e-06
+Epoch 84/100
+ - 2s - loss: 4.9258e-06
+Epoch 85/100
+ - 2s - loss: 4.9584e-06
+Epoch 86/100
+ - 2s - loss: 4.9375e-06
+Epoch 87/100
+ - 2s - loss: 4.8994e-06
+Epoch 88/100
+ - 2s - loss: 4.9441e-06
+Epoch 89/100
+ - 2s - loss: 4.8411e-06
+Epoch 90/100
+ - 2s - loss: 4.9038e-06
+Epoch 91/100
+ - 3s - loss: 4.6969e-06
+Epoch 92/100
+ - 2s - loss: 4.8564e-06
+Epoch 93/100
+ - 2s - loss: 5.0580e-06
+Epoch 94/100
+ - 2s - loss: 4.7293e-06
+Epoch 95/100
+ - 2s - loss: 4.8317e-06
+Epoch 96/100
+ - 2s - loss: 4.7452e-06
+Epoch 97/100
+ - 2s - loss: 4.9559e-06
+Epoch 98/100
+ - 2s - loss: 5.0109e-06
+Epoch 99/100
+ - 2s - loss: 4.7767e-06
+Epoch 100/100
+ - 2s - loss: 4.6827e-06
+/home/irm13002/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+0
+Traceback (most recent call last):
+  File "lstm1.py", line 105, in <module>
+    trainPredict = predict_from_saved_model(trainX1)
+  File "lstm1.py", line 30, in predict_from_saved_model
+    with open('model_architecture_spx.json', 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'model_architecture_spx.json'
+2018-03-28 21:40:32.132879: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-03-28 21:40:34.782792: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1212] Found device 0 with properties: 
+name: Tesla M60 major: 5 minor: 2 memoryClockRate(GHz): 1.1775
+pciBusID: 0000:83:00.0
+totalMemory: 7.93GiB freeMemory: 7.85GiB
+2018-03-28 21:40:35.386429: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1212] Found device 1 with properties: 
+name: Tesla M60 major: 5 minor: 2 memoryClockRate(GHz): 1.1775
+pciBusID: 0000:84:00.0
+totalMemory: 7.93GiB freeMemory: 7.85GiB
+2018-03-28 21:40:35.386816: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1227] Device peer to peer matrix
+2018-03-28 21:40:35.386861: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1233] DMA: 0 1 
+2018-03-28 21:40:35.386873: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1243] 0:   Y Y 
+2018-03-28 21:40:35.386880: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1243] 1:   Y Y 
+2018-03-28 21:40:35.386895: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0, 1
+2018-03-28 21:40:36.123158: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 7585 MB memory) -> physical GPU (device: 0, name: Tesla M60, pci bus id: 0000:83:00.0, compute capability: 5.2)
+2018-03-28 21:40:36.233808: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 7585 MB memory) -> physical GPU (device: 1, name: Tesla M60, pci bus id: 0000:84:00.0, compute capability: 5.2)
+22664
+20397
+2267
+Epoch 1/100
+ - 7s - loss: 0.0047
+Epoch 2/100
+ - 3s - loss: 1.4254e-05
+Epoch 3/100
+ - 3s - loss: 1.2993e-05
+Epoch 4/100
+ - 3s - loss: 1.1502e-05
+Epoch 5/100
+ - 3s - loss: 9.9278e-06
+Epoch 6/100
+ - 3s - loss: 8.4354e-06
+Epoch 7/100
+ - 3s - loss: 7.1727e-06
+Epoch 8/100
+ - 3s - loss: 6.1469e-06
+Epoch 9/100
+ - 3s - loss: 5.3325e-06
+Epoch 10/100
+ - 3s - loss: 5.0988e-06
+Epoch 11/100
+ - 2s - loss: 4.6874e-06
+Epoch 12/100
+ - 3s - loss: 4.7600e-06
+Epoch 13/100
+ - 2s - loss: 4.7847e-06
+Epoch 14/100
+ - 2s - loss: 4.7070e-06
+Epoch 15/100
+ - 3s - loss: 4.9137e-06
+Epoch 16/100
+ - 3s - loss: 4.8944e-06
+Epoch 17/100
+ - 2s - loss: 5.0805e-06
+Epoch 18/100
+ - 3s - loss: 4.8063e-06
+Epoch 19/100
+ - 2s - loss: 4.7602e-06
+Epoch 20/100
+ - 2s - loss: 4.9972e-06
+Epoch 21/100
+ - 2s - loss: 5.0294e-06
+Epoch 22/100
+ - 2s - loss: 4.9949e-06
+Epoch 23/100
+ - 2s - loss: 4.9706e-06
+Epoch 24/100
+ - 2s - loss: 4.8009e-06
+Epoch 25/100
+ - 3s - loss: 4.9332e-06
+Epoch 26/100
+ - 3s - loss: 4.7767e-06
+Epoch 27/100
+ - 2s - loss: 5.1008e-06
+Epoch 28/100
+ - 3s - loss: 4.9213e-06
+Epoch 29/100
+ - 3s - loss: 4.7872e-06
+Epoch 30/100
+ - 3s - loss: 5.0936e-06
+Epoch 31/100
+ - 3s - loss: 4.7747e-06
+Epoch 32/100
+ - 2s - loss: 5.0154e-06
+Epoch 33/100
+ - 2s - loss: 4.9421e-06
+Epoch 34/100
+ - 2s - loss: 4.8151e-06
+Epoch 35/100
+ - 2s - loss: 4.7404e-06
+Epoch 36/100
+ - 2s - loss: 4.8980e-06
+Epoch 37/100
+ - 2s - loss: 5.0127e-06
+Epoch 38/100
+ - 3s - loss: 4.8691e-06
+Epoch 39/100
+ - 3s - loss: 4.8085e-06
+Epoch 40/100
+ - 3s - loss: 5.0779e-06
+Epoch 41/100
+ - 2s - loss: 4.9665e-06
+Epoch 42/100
+ - 2s - loss: 4.7116e-06
+Epoch 43/100
+ - 2s - loss: 4.7338e-06
+Epoch 44/100
+ - 2s - loss: 4.9689e-06
+Epoch 45/100
+ - 2s - loss: 4.7933e-06
+Epoch 46/100
+ - 2s - loss: 5.0012e-06
+Epoch 47/100
+ - 2s - loss: 4.7345e-06
+Epoch 48/100
+ - 2s - loss: 4.9064e-06
+Epoch 49/100
+ - 2s - loss: 4.8770e-06
+Epoch 50/100
+ - 2s - loss: 4.7239e-06
+Epoch 51/100
+ - 2s - loss: 4.8573e-06
+Epoch 52/100
+ - 2s - loss: 4.9117e-06
+Epoch 53/100
+ - 2s - loss: 4.9758e-06
+Epoch 54/100
+ - 2s - loss: 5.1961e-06
+Epoch 55/100
+ - 2s - loss: 4.7405e-06
+Epoch 56/100
+ - 2s - loss: 4.9242e-06
+Epoch 57/100
+ - 2s - loss: 4.8137e-06
+Epoch 58/100
+ - 2s - loss: 4.9543e-06
+Epoch 59/100
+ - 2s - loss: 4.7705e-06
+Epoch 60/100
+ - 2s - loss: 4.9378e-06
+Epoch 61/100
+ - 2s - loss: 4.9146e-06
+Epoch 62/100
+ - 2s - loss: 4.7760e-06
+Epoch 63/100
+ - 2s - loss: 4.9794e-06
+Epoch 64/100
+ - 2s - loss: 5.1703e-06
+Epoch 65/100
+ - 2s - loss: 4.9464e-06
+Epoch 66/100
+ - 2s - loss: 4.7070e-06
+Epoch 67/100
+ - 3s - loss: 4.8659e-06
+Epoch 68/100
+ - 3s - loss: 4.8873e-06
+Epoch 69/100
+ - 3s - loss: 4.7987e-06
+Epoch 70/100
+ - 3s - loss: 4.7794e-06
+Epoch 71/100
+ - 3s - loss: 4.9691e-06
+Epoch 72/100
+ - 2s - loss: 4.8073e-06
+Epoch 73/100
+ - 3s - loss: 5.0272e-06
+Epoch 74/100
+ - 2s - loss: 4.9097e-06
+Epoch 75/100
+ - 2s - loss: 4.8106e-06
+Epoch 76/100
+ - 2s - loss: 5.0936e-06
+Epoch 77/100
+ - 2s - loss: 4.6332e-06
+Epoch 78/100
+ - 2s - loss: 4.9548e-06
+Epoch 79/100
+ - 2s - loss: 4.9756e-06
+Epoch 80/100
+ - 2s - loss: 4.8021e-06
+Epoch 81/100
+ - 2s - loss: 4.8298e-06
+Epoch 82/100
+ - 2s - loss: 4.6892e-06
+Epoch 83/100
+ - 2s - loss: 4.7889e-06
+Epoch 84/100
+ - 3s - loss: 4.9257e-06
+Epoch 85/100
+ - 3s - loss: 4.9585e-06
+Epoch 86/100
+ - 3s - loss: 4.9375e-06
+Epoch 87/100
+ - 2s - loss: 4.8993e-06
+Epoch 88/100
+ - 2s - loss: 4.9441e-06
+Epoch 89/100
+ - 2s - loss: 4.8411e-06
+Epoch 90/100
+ - 2s - loss: 4.9030e-06
+Epoch 91/100
+ - 2s - loss: 4.6970e-06
+Epoch 92/100
+ - 2s - loss: 4.8563e-06
+Epoch 93/100
+ - 2s - loss: 5.0582e-06
+Epoch 94/100
+ - 2s - loss: 4.7293e-06
+Epoch 95/100
+ - 2s - loss: 4.8317e-06
+Epoch 96/100
+ - 2s - loss: 4.7464e-06
+Epoch 97/100
+ - 2s - loss: 4.9556e-06
+Epoch 98/100
+ - 2s - loss: 5.0108e-06
+Epoch 99/100
+ - 2s - loss: 4.7766e-06
+Epoch 100/100
+ - 2s - loss: 4.6827e-06
+0
+Train Score: 6.89 RMSE
+Test Score: 41.71 RMSE
+20398
+2267
+Epoch 1/100
+ - 3s - loss: 4.8679e-06
+Epoch 2/100
+ - 2s - loss: 4.9084e-06
+Epoch 3/100
+ - 2s - loss: 4.9376e-06
+Epoch 4/100
+ - 2s - loss: 4.8539e-06
+Epoch 5/100
+ - 2s - loss: 4.8392e-06
+Epoch 6/100
+ - 2s - loss: 4.7689e-06
+Epoch 7/100
+ - 2s - loss: 4.8067e-06
+Epoch 8/100
+ - 2s - loss: 4.8094e-06
+Epoch 9/100
+ - 2s - loss: 4.8610e-06
+Epoch 10/100
+ - 2s - loss: 5.0314e-06
+Epoch 11/100
+ - 2s - loss: 4.9384e-06
+Epoch 12/100
+ - 2s - loss: 5.0091e-06
+Epoch 13/100
+ - 2s - loss: 4.7397e-06
+Epoch 14/100
+ - 2s - loss: 4.8346e-06
+Epoch 15/100
+ - 2s - loss: 5.0293e-06
+Epoch 16/100
+ - 2s - loss: 4.9030e-06
+Epoch 17/100
+ - 2s - loss: 4.7636e-06
+Epoch 18/100
+ - 2s - loss: 4.9871e-06
+Epoch 19/100
+ - 3s - loss: 4.7074e-06
+Epoch 20/100
+ - 3s - loss: 4.9436e-06
+Epoch 21/100
+ - 2s - loss: 4.7928e-06
+Epoch 22/100
+ - 2s - loss: 5.0074e-06
+Epoch 23/100
+ - 2s - loss: 4.7342e-06
+Epoch 24/100
+ - 2s - loss: 4.8902e-06
+Epoch 25/100
+ - 2s - loss: 5.1308e-06
+Epoch 26/100
+ - 2s - loss: 4.9135e-06
+Epoch 27/100
+ - 2s - loss: 4.8200e-06
+Epoch 28/100
+ - 2s - loss: 5.0577e-06
+Epoch 29/100
+ - 2s - loss: 4.7663e-06
+Epoch 30/100
+ - 2s - loss: 4.9143e-06
+Epoch 31/100
+ - 2s - loss: 5.0015e-06
+Epoch 32/100
+ - 2s - loss: 4.8782e-06
+Epoch 33/100
+ - 2s - loss: 5.0044e-06
+Epoch 34/100
+ - 3s - loss: 4.9313e-06
+Epoch 35/100
+ - 3s - loss: 4.8135e-06
+Epoch 36/100
+ - 3s - loss: 4.7471e-06
+Epoch 37/100
+ - 3s - loss: 4.8829e-06
+Epoch 38/100
+ - 3s - loss: 5.0161e-06
+Epoch 39/100
+ - 3s - loss: 4.7456e-06
+Epoch 40/100
+ - 3s - loss: 4.8315e-06
+Epoch 41/100
+ - 3s - loss: 5.0698e-06
+Epoch 42/100
+ - 3s - loss: 4.7837e-06
+Epoch 43/100
+ - 3s - loss: 4.9913e-06
+Epoch 44/100
+ - 3s - loss: 5.0212e-06
+Epoch 45/100
+ - 3s - loss: 4.7209e-06
+Epoch 46/100
+ - 3s - loss: 4.8197e-06
+Epoch 47/100
+ - 3s - loss: 4.9240e-06
+Epoch 48/100
+ - 3s - loss: 4.8690e-06
+Epoch 49/100
+ - 2s - loss: 4.7614e-06
+Epoch 50/100
+ - 3s - loss: 4.7548e-06
+Epoch 51/100
+ - 3s - loss: 4.7053e-06
+Epoch 52/100
+ - 2s - loss: 5.0269e-06
+Epoch 53/100
+ - 2s - loss: 4.6956e-06
+Epoch 54/100
+ - 3s - loss: 4.7721e-06
+Epoch 55/100
+ - 3s - loss: 4.6623e-06
+Epoch 56/100
+ - 2s - loss: 4.8840e-06
+Epoch 57/100
+ - 2s - loss: 4.8862e-06
+Epoch 58/100
+ - 3s - loss: 4.8293e-06
+Epoch 59/100
+ - 2s - loss: 4.8574e-06
+Epoch 60/100
+ - 3s - loss: 4.9734e-06
+Epoch 61/100
+ - 3s - loss: 4.9007e-06
+Epoch 62/100
+ - 3s - loss: 4.7950e-06
+Epoch 63/100
+ - 3s - loss: 4.9264e-06
+Epoch 64/100
+ - 3s - loss: 4.8356e-06
+Epoch 65/100
+ - 3s - loss: 5.2709e-06
+Epoch 66/100
+ - 2s - loss: 4.8725e-06
+Epoch 67/100
+ - 2s - loss: 4.7861e-06
+Epoch 68/100
+ - 3s - loss: 4.8763e-06
+Epoch 69/100
+ - 2s - loss: 4.8689e-06
+Epoch 70/100
+ - 3s - loss: 4.9158e-06
+Epoch 71/100
+ - 3s - loss: 4.9637e-06
+Epoch 72/100
+ - 2s - loss: 4.9496e-06
+Epoch 73/100
+ - 3s - loss: 4.6610e-06
+Epoch 74/100
+ - 2s - loss: 4.8695e-06
+Epoch 75/100
+ - 3s - loss: 4.8584e-06
+Epoch 76/100
+ - 3s - loss: 4.9950e-06
+Epoch 77/100
+ - 3s - loss: 4.7629e-06
+Epoch 78/100
+ - 2s - loss: 4.9298e-06
+Epoch 79/100
+ - 3s - loss: 5.0971e-06
+Epoch 80/100
+ - 2s - loss: 4.8889e-06
+Epoch 81/100
+ - 3s - loss: 4.9390e-06
+Epoch 82/100
+ - 3s - loss: 4.8828e-06
+Epoch 83/100
+ - 2s - loss: 4.7625e-06
+Epoch 84/100
+ - 2s - loss: 4.9289e-06
+Epoch 85/100
+ - 2s - loss: 4.8682e-06
+Epoch 86/100
+ - 2s - loss: 4.8815e-06
+Epoch 87/100
+ - 2s - loss: 4.8804e-06
+Epoch 88/100
+ - 2s - loss: 4.8554e-06
+Epoch 89/100
+ - 2s - loss: 4.8860e-06
+Epoch 90/100
+ - 2s - loss: 4.8698e-06
+Epoch 91/100
+ - 3s - loss: 5.0972e-06
+Epoch 92/100
+ - 2s - loss: 4.7173e-06
+Epoch 93/100
+ - 2s - loss: 5.0392e-06
+Epoch 94/100
+ - 2s - loss: 4.9129e-06
+Epoch 95/100
+ - 3s - loss: 4.7927e-06
+Epoch 96/100
+ - 3s - loss: 4.7456e-06
+Epoch 97/100
+ - 2s - loss: 4.7888e-06
+Epoch 98/100
+ - 2s - loss: 5.0586e-06
+Epoch 99/100
+ - 2s - loss: 4.9212e-06
+Epoch 100/100
+ - 3s - loss: 4.7234e-06
+1
+Train Score: 7.00 RMSE
+Test Score: 44.00 RMSE
+20399
+2267
+Epoch 1/100
+ - 3s - loss: 4.9210e-06
+Epoch 2/100
+ - 3s - loss: 4.8788e-06
+Epoch 3/100
+ - 2s - loss: 4.8695e-06
+Epoch 4/100
+ - 2s - loss: 4.9839e-06
+Epoch 5/100
+ - 2s - loss: 4.9657e-06
+Epoch 6/100
+ - 2s - loss: 4.8417e-06
+Epoch 7/100
+ - 2s - loss: 4.8125e-06
+Epoch 8/100
+ - 2s - loss: 4.8887e-06
+Epoch 9/100
+ - 2s - loss: 4.9662e-06
+Epoch 10/100
+ - 2s - loss: 4.8969e-06
+Epoch 11/100
+ - 2s - loss: 4.8648e-06
+Epoch 12/100
+ - 2s - loss: 4.8054e-06
+Epoch 13/100
+ - 2s - loss: 4.8451e-06
+Epoch 14/100
+ - 2s - loss: 4.8161e-06
+Epoch 15/100
+ - 3s - loss: 4.8590e-06
+Epoch 16/100
+ - 3s - loss: 4.7764e-06
+Epoch 17/100
+ - 2s - loss: 5.0935e-06
+Epoch 18/100
+ - 2s - loss: 4.7403e-06
+Epoch 19/100
+ - 2s - loss: 5.0326e-06
+Epoch 20/100
+ - 2s - loss: 5.0841e-06
+Epoch 21/100
+ - 2s - loss: 4.7447e-06
+Epoch 22/100
+ - 3s - loss: 4.9003e-06
+Epoch 23/100
+ - 2s - loss: 4.7723e-06
+Epoch 24/100
+ - 3s - loss: 4.7070e-06
+Epoch 25/100
+ - 2s - loss: 4.8036e-06
+Epoch 26/100
+ - 2s - loss: 4.8522e-06
+Epoch 27/100
+ - 3s - loss: 4.7064e-06
+Epoch 28/100
+ - 2s - loss: 4.7542e-06
+Epoch 29/100
+ - 2s - loss: 4.9360e-06
+Epoch 30/100
+ - 2s - loss: 5.0154e-06
+Epoch 31/100
+ - 2s - loss: 5.0001e-06
+Epoch 32/100
+ - 2s - loss: 4.8108e-06
+Epoch 33/100
+ - 2s - loss: 5.2026e-06
+Epoch 34/100
+ - 2s - loss: 4.7630e-06
+Epoch 35/100
+ - 2s - loss: 4.8759e-06
+Epoch 36/100
+ - 2s - loss: 4.7712e-06
+Epoch 37/100
+ - 2s - loss: 4.8466e-06
+Epoch 38/100
+ - 2s - loss: 4.9306e-06
+Epoch 39/100
+ - 2s - loss: 5.0135e-06
+Epoch 40/100
+ - 2s - loss: 4.7488e-06
+Epoch 41/100
+ - 2s - loss: 4.8151e-06
+Epoch 42/100
+ - 2s - loss: 4.8526e-06
+Epoch 43/100
+ - 2s - loss: 4.6356e-06
+Epoch 44/100
+ - 2s - loss: 4.8671e-06
+Epoch 45/100
+ - 2s - loss: 5.0333e-06
+Epoch 46/100
+ - 2s - loss: 4.9630e-06
+Epoch 47/100
+ - 2s - loss: 4.8374e-06
+Epoch 48/100
+ - 2s - loss: 4.8618e-06
+Epoch 49/100
+ - 3s - loss: 4.7326e-06
+Epoch 50/100
+ - 3s - loss: 4.7407e-06
+Epoch 51/100
+ - 2s - loss: 4.8155e-06
+Epoch 52/100
+ - 2s - loss: 4.8179e-06
+Epoch 53/100
+ - 3s - loss: 4.6223e-06
+Epoch 54/100
+ - 3s - loss: 4.8375e-06
+Epoch 55/100
+ - 2s - loss: 4.8902e-06
+Epoch 56/100
+ - 2s - loss: 4.7961e-06
+Epoch 57/100
+ - 2s - loss: 4.8174e-06
+Epoch 58/100
+ - 3s - loss: 4.8965e-06
+Epoch 59/100
+ - 3s - loss: 4.7571e-06
+Epoch 60/100
+ - 3s - loss: 4.9460e-06
+Epoch 61/100
+ - 2s - loss: 4.9928e-06
+Epoch 62/100
+ - 3s - loss: 4.8207e-06
+Epoch 63/100
+ - 3s - loss: 5.0515e-06
+Epoch 64/100
+ - 3s - loss: 4.7665e-06
+Epoch 65/100
+ - 3s - loss: 4.8457e-06
+Epoch 66/100
+ - 3s - loss: 4.7529e-06
+Epoch 67/100
+ - 3s - loss: 4.7548e-06
+Epoch 68/100
+ - 3s - loss: 4.9510e-06
+Epoch 69/100
+ - 3s - loss: 4.8233e-06
+Epoch 70/100
+ - 3s - loss: 4.8813e-06
+Epoch 71/100
+ - 3s - loss: 4.8142e-06
+Epoch 72/100
+ - 3s - loss: 4.8608e-06
+Epoch 73/100
+ - 3s - loss: 4.8673e-06
+Epoch 74/100
+ - 2s - loss: 4.9095e-06
+Epoch 75/100
+ - 3s - loss: 4.9913e-06
+Epoch 76/100
+ - 3s - loss: 4.7058e-06
+Epoch 77/100
+ - 3s - loss: 5.1824e-06
+Epoch 78/100
+ - 2s - loss: 4.8896e-06
+Epoch 79/100
+ - 3s - loss: 5.0040e-06
+Epoch 80/100
+ - 2s - loss: 4.7694e-06
+Epoch 81/100
+ - 3s - loss: 4.7041e-06
+Epoch 82/100
+ - 2s - loss: 4.8258e-06
+Epoch 83/100
+ - 3s - loss: 4.8378e-06
+Epoch 84/100
+ - 3s - loss: 4.9955e-06
+Epoch 85/100
+ - 3s - loss: 4.8897e-06
+Epoch 86/100
+ - 3s - loss: 4.8498e-06
+Epoch 87/100
+ - 3s - loss: 4.7050e-06
+Epoch 88/100
+ - 3s - loss: 4.7877e-06
+Epoch 89/100
+ - 3s - loss: 4.7716e-06
+Epoch 90/100
+ - 3s - loss: 4.9831e-06
+Epoch 91/100
+ - 3s - loss: 4.7740e-06
+Epoch 92/100
+ - 3s - loss: 4.7743e-06
+Epoch 93/100
+ - 3s - loss: 4.8036e-06
+Epoch 94/100
+ - 2s - loss: 4.9297e-06
+Epoch 95/100
+ - 2s - loss: 4.7656e-06
+Epoch 96/100
+ - 3s - loss: 4.8178e-06
+Epoch 97/100
+ - 3s - loss: 4.8334e-06
+Epoch 98/100
+ - 2s - loss: 4.8542e-06
+Epoch 99/100
+ - 3s - loss: 4.6517e-06
+Epoch 100/100
+ - 3s - loss: 4.6930e-06
+2
+Train Score: 5.99 RMSE
+Test Score: 47.72 RMSE
+22664
+22664
+0
+Epoch 1/100
+ - 4s - loss: 0.0188
+Epoch 2/100
+ - 3s - loss: 3.0249e-05
+Epoch 3/100
+ - 3s - loss: 2.3086e-05
+Epoch 4/100
+ - 3s - loss: 1.7590e-05
+Epoch 5/100
+ - 3s - loss: 1.3926e-05
+Epoch 6/100
+ - 3s - loss: 1.1989e-05
+Epoch 7/100
+ - 3s - loss: 1.1256e-05
+Epoch 8/100
+ - 3s - loss: 1.0929e-05
+Epoch 9/100
+ - 3s - loss: 1.1011e-05
+Epoch 10/100
+ - 3s - loss: 1.0887e-05
+Epoch 11/100
+ - 3s - loss: 1.1088e-05
+Epoch 12/100
+ - 3s - loss: 1.1195e-05
+Epoch 13/100
+ - 3s - loss: 1.0796e-05
+Epoch 14/100
+ - 3s - loss: 1.1233e-05
+Epoch 15/100
+ - 3s - loss: 1.0788e-05
+Epoch 16/100
+ - 3s - loss: 1.0897e-05
+Epoch 17/100
+ - 3s - loss: 1.1075e-05
+Epoch 18/100
+ - 3s - loss: 1.0693e-05
+Epoch 19/100
+ - 3s - loss: 1.0883e-05
+Epoch 20/100
+ - 3s - loss: 1.0549e-05
+Epoch 21/100
+ - 3s - loss: 1.0184e-05
+Epoch 22/100
+ - 3s - loss: 1.0304e-05
+Epoch 23/100
+ - 3s - loss: 1.0169e-05
+Epoch 24/100
+ - 3s - loss: 1.0117e-05
+Epoch 25/100
+ - 3s - loss: 1.0100e-05
+Epoch 26/100
+ - 3s - loss: 9.9328e-06
+Epoch 27/100
+ - 3s - loss: 1.0047e-05
+Epoch 28/100
+ - 3s - loss: 9.6562e-06
+Epoch 29/100
+ - 3s - loss: 9.5167e-06
+Epoch 30/100
+ - 3s - loss: 9.8841e-06
+Epoch 31/100
+ - 3s - loss: 9.5823e-06
+Epoch 32/100
+ - 3s - loss: 9.5128e-06
+Epoch 33/100
+ - 3s - loss: 9.5972e-06
+Epoch 34/100
+ - 3s - loss: 9.2215e-06
+Epoch 35/100
+ - 3s - loss: 9.3643e-06
+Epoch 36/100
+ - 3s - loss: 9.2958e-06
+Epoch 37/100
+ - 3s - loss: 9.1664e-06
+Epoch 38/100
+ - 3s - loss: 9.4124e-06
+Epoch 39/100
+ - 3s - loss: 8.9762e-06
+Epoch 40/100
+ - 3s - loss: 8.8655e-06
+Epoch 41/100
+ - 3s - loss: 8.8104e-06
+Epoch 42/100
+ - 3s - loss: 8.9404e-06
+Epoch 43/100
+ - 3s - loss: 9.0241e-06
+Epoch 44/100
+ - 3s - loss: 8.7890e-06
+Epoch 45/100
+ - 3s - loss: 8.8636e-06
+Epoch 46/100
+ - 3s - loss: 8.6629e-06
+Epoch 47/100
+ - 3s - loss: 8.5975e-06
+Epoch 48/100
+ - 3s - loss: 8.3763e-06
+Epoch 49/100
+ - 3s - loss: 8.4743e-06
+Epoch 50/100
+ - 3s - loss: 8.4467e-06
+Epoch 51/100
+ - 3s - loss: 8.4304e-06
+Epoch 52/100
+ - 3s - loss: 8.3653e-06
+Epoch 53/100
+ - 3s - loss: 8.2045e-06
+Epoch 54/100
+ - 3s - loss: 8.1898e-06
+Epoch 55/100
+ - 3s - loss: 8.9927e-06
+Epoch 56/100
+ - 3s - loss: 8.0328e-06
+Epoch 57/100
+ - 3s - loss: 7.8943e-06
+Epoch 58/100
+ - 3s - loss: 8.1863e-06
+Epoch 59/100
+ - 3s - loss: 8.6553e-06
+Epoch 60/100
+ - 3s - loss: 8.1877e-06
+Epoch 61/100
+ - 3s - loss: 8.2681e-06
+Epoch 62/100
+ - 3s - loss: 8.1488e-06
+Epoch 63/100
+ - 3s - loss: 7.8829e-06
+Epoch 64/100
+ - 3s - loss: 7.7655e-06
+Epoch 65/100
+ - 3s - loss: 7.8225e-06
+Epoch 66/100
+ - 3s - loss: 7.9003e-06
+Epoch 67/100
+ - 3s - loss: 7.9994e-06
+Epoch 68/100
+ - 3s - loss: 7.8131e-06
+Epoch 69/100
+ - 3s - loss: 7.9054e-06
+Epoch 70/100
+ - 3s - loss: 7.6659e-06
+Epoch 71/100
+ - 3s - loss: 8.0286e-06
+Epoch 72/100
+ - 3s - loss: 7.7887e-06
+Epoch 73/100
+ - 3s - loss: 8.0215e-06
+Epoch 74/100
+ - 3s - loss: 7.4950e-06
+Epoch 75/100
+ - 3s - loss: 7.5912e-06
+Epoch 76/100
+ - 3s - loss: 7.5681e-06
+Epoch 77/100
+ - 3s - loss: 7.6704e-06
+Epoch 78/100
+ - 3s - loss: 7.5588e-06
+Epoch 79/100
+ - 3s - loss: 7.6476e-06
+Epoch 80/100
+ - 3s - loss: 7.4040e-06
+Epoch 81/100
+ - 3s - loss: 7.5081e-06
+Epoch 82/100
+ - 3s - loss: 7.5244e-06
+Epoch 83/100
+ - 3s - loss: 7.3816e-06
+Epoch 84/100
+ - 3s - loss: 7.6812e-06
+Epoch 85/100
+ - 3s - loss: 7.5437e-06
+Epoch 86/100
+ - 3s - loss: 7.5440e-06
+Epoch 87/100
+ - 3s - loss: 7.2370e-06
+Epoch 88/100
+ - 3s - loss: 7.3664e-06
+Epoch 89/100
+ - 3s - loss: 7.5581e-06
+Epoch 90/100
+ - 3s - loss: 7.2810e-06
+Epoch 91/100
+ - 3s - loss: 7.3854e-06
+Epoch 92/100
+ - 3s - loss: 7.3881e-06
+Epoch 93/100
+ - 3s - loss: 7.5229e-06
+Epoch 94/100
+ - 3s - loss: 7.1887e-06
+Epoch 95/100
+ - 3s - loss: 7.2540e-06
+Epoch 96/100
+ - 3s - loss: 7.2773e-06
+Epoch 97/100
+ - 3s - loss: 7.4651e-06
+Epoch 98/100
+ - 3s - loss: 7.1864e-06
+Epoch 99/100
+ - 3s - loss: 7.4368e-06
+Epoch 100/100
+ - 3s - loss: 7.0648e-06
+0
+22665
+0
+Epoch 1/100
+ - 3s - loss: 7.2494e-06
+Epoch 2/100
+ - 3s - loss: 7.2672e-06
+Epoch 3/100
+ - 3s - loss: 7.1995e-06
+Epoch 4/100
+ - 3s - loss: 7.2850e-06
+Epoch 5/100
+ - 3s - loss: 7.3210e-06
+Epoch 6/100
+ - 3s - loss: 7.0444e-06
+Epoch 7/100
+ - 3s - loss: 7.3792e-06
+Epoch 8/100
+ - 3s - loss: 7.0658e-06
+Epoch 9/100
+ - 3s - loss: 7.3876e-06
+Epoch 10/100
+ - 3s - loss: 7.1448e-06
+Epoch 11/100
+ - 3s - loss: 6.8297e-06
+Epoch 12/100
+ - 3s - loss: 7.4716e-06
+Epoch 13/100
+ - 3s - loss: 7.2229e-06
+Epoch 14/100
+ - 3s - loss: 7.5777e-06
+Epoch 15/100
+ - 3s - loss: 7.0904e-06
+Epoch 16/100
+ - 3s - loss: 7.3058e-06
+Epoch 17/100
+ - 3s - loss: 7.1168e-06
+Epoch 18/100
+ - 3s - loss: 7.3061e-06
+Epoch 19/100
+ - 3s - loss: 7.1721e-06
+Epoch 20/100
+ - 3s - loss: 7.1993e-06
+Epoch 21/100
+ - 3s - loss: 7.0503e-06
+Epoch 22/100
+ - 3s - loss: 7.3898e-06
+Epoch 23/100
+ - 3s - loss: 7.1519e-06
+Epoch 24/100
+ - 3s - loss: 7.2347e-06
+Epoch 25/100
+ - 3s - loss: 7.3743e-06
+Epoch 26/100
+ - 3s - loss: 7.3524e-06
+Epoch 27/100
+ - 3s - loss: 7.5720e-06
+Epoch 28/100
+ - 3s - loss: 6.9644e-06
+Epoch 29/100
+ - 3s - loss: 7.1445e-06
+Epoch 30/100
+ - 3s - loss: 7.2366e-06
+Epoch 31/100
+ - 3s - loss: 7.0899e-06
+Epoch 32/100
+ - 3s - loss: 7.1477e-06
+Epoch 33/100
+ - 3s - loss: 6.9994e-06
+Epoch 34/100
+ - 3s - loss: 7.1832e-06
+Epoch 35/100
+ - 3s - loss: 7.0283e-06
+Epoch 36/100
+ - 3s - loss: 7.4491e-06
+Epoch 37/100
+ - 3s - loss: 7.0771e-06
+Epoch 38/100
+ - 3s - loss: 7.1965e-06
+Epoch 39/100
+ - 3s - loss: 7.2158e-06
+Epoch 40/100
+ - 3s - loss: 7.4569e-06
+Epoch 41/100
+ - 3s - loss: 7.4256e-06
+Epoch 42/100
+ - 3s - loss: 6.8578e-06
+Epoch 43/100
+ - 3s - loss: 7.4533e-06
+Epoch 44/100
+ - 3s - loss: 7.8956e-06
+Epoch 45/100
+ - 3s - loss: 6.9875e-06
+Epoch 46/100
+ - 3s - loss: 7.2023e-06
+Epoch 47/100
+ - 3s - loss: 7.2571e-06
+Epoch 48/100
+ - 3s - loss: 7.0094e-06
+Epoch 49/100
+ - 3s - loss: 7.1209e-06
+Epoch 50/100
+ - 3s - loss: 7.5500e-06
+Epoch 51/100
+ - 3s - loss: 7.1678e-06
+Epoch 52/100
+ - 3s - loss: 7.2516e-06
+Epoch 53/100
+ - 3s - loss: 7.1284e-06
+Epoch 54/100
+ - 3s - loss: 6.9864e-06
+Epoch 55/100
+ - 3s - loss: 7.2745e-06
+Epoch 56/100
+ - 3s - loss: 7.0616e-06
+Epoch 57/100
+ - 3s - loss: 7.4712e-06
+Epoch 58/100
+ - 3s - loss: 7.1622e-06
+Epoch 59/100
+ - 3s - loss: 6.9552e-06
+Epoch 60/100
+ - 3s - loss: 7.3340e-06
+Epoch 61/100
+ - 3s - loss: 7.0895e-06
+Epoch 62/100
+ - 3s - loss: 7.0495e-06
+Epoch 63/100
+ - 3s - loss: 7.2890e-06
+Epoch 64/100
+ - 3s - loss: 7.1344e-06
+Epoch 65/100
+ - 3s - loss: 6.9847e-06
+Epoch 66/100
+ - 3s - loss: 7.1132e-06
+Epoch 67/100
+ - 3s - loss: 7.2812e-06
+Epoch 68/100
+ - 3s - loss: 7.0975e-06
+Epoch 69/100
+ - 3s - loss: 7.2098e-06
+Epoch 70/100
+ - 3s - loss: 7.0682e-06
+Epoch 71/100
+ - 3s - loss: 7.1886e-06
+Epoch 72/100
+ - 3s - loss: 7.6588e-06
+Epoch 73/100
+ - 3s - loss: 7.3117e-06
+Epoch 74/100
+ - 3s - loss: 6.9641e-06
+Epoch 75/100
+ - 3s - loss: 7.1761e-06
+Epoch 76/100
+ - 3s - loss: 7.3451e-06
+Epoch 77/100
+ - 3s - loss: 6.9797e-06
+Epoch 78/100
+ - 3s - loss: 7.0287e-06
+Epoch 79/100
+ - 3s - loss: 7.1413e-06
+Epoch 80/100
+ - 3s - loss: 7.2119e-06
+Epoch 81/100
+ - 3s - loss: 7.1389e-06
+Epoch 82/100
+ - 3s - loss: 7.0857e-06
+Epoch 83/100
+ - 3s - loss: 7.0916e-06
+Epoch 84/100
+ - 3s - loss: 7.2931e-06
+Epoch 85/100
+ - 3s - loss: 7.4196e-06
+Epoch 86/100
+ - 3s - loss: 6.8943e-06
+Epoch 87/100
+ - 3s - loss: 7.1912e-06
+Epoch 88/100
+ - 3s - loss: 7.1419e-06
+Epoch 89/100
+ - 3s - loss: 7.1745e-06
+Epoch 90/100
+ - 3s - loss: 7.1991e-06
+Epoch 91/100
+ - 3s - loss: 7.2250e-06
+Epoch 92/100
+ - 3s - loss: 7.3389e-06
+Epoch 93/100
+ - 3s - loss: 7.0209e-06
+Epoch 94/100
+ - 3s - loss: 7.3371e-06
+Epoch 95/100
+ - 3s - loss: 7.0184e-06
+Epoch 96/100
+ - 3s - loss: 7.2016e-06
+Epoch 97/100
+ - 3s - loss: 7.0527e-06
+Epoch 98/100
+ - 3s - loss: 6.8630e-06
+Epoch 99/100
+ - 3s - loss: 7.2291e-06
+Epoch 100/100
+ - 3s - loss: 7.1181e-06
+1
+22666
+0
+Epoch 1/100
+ - 3s - loss: 7.0838e-06
+Epoch 2/100
+ - 3s - loss: 7.4505e-06
+Epoch 3/100
+ - 3s - loss: 7.0561e-06
+Epoch 4/100
+ - 3s - loss: 7.2004e-06
+Epoch 5/100
+ - 3s - loss: 6.9602e-06
+Epoch 6/100
+ - 3s - loss: 7.3770e-06
+Epoch 7/100
+ - 3s - loss: 7.3971e-06
+Epoch 8/100
+ - 3s - loss: 7.1331e-06
+Epoch 9/100
+ - 3s - loss: 7.0851e-06
+Epoch 10/100
+ - 3s - loss: 7.1397e-06
+Epoch 11/100
+ - 3s - loss: 7.1194e-06
+Epoch 12/100
+ - 3s - loss: 7.0087e-06
+Epoch 13/100
+ - 3s - loss: 7.2612e-06
+Epoch 14/100
+ - 3s - loss: 7.2605e-06
+Epoch 15/100
+ - 3s - loss: 7.0026e-06
+Epoch 16/100
+ - 3s - loss: 7.2455e-06
+Epoch 17/100
+ - 3s - loss: 7.3609e-06
+Epoch 18/100
+ - 3s - loss: 7.4018e-06
+Epoch 19/100
+ - 3s - loss: 7.1995e-06
+Epoch 20/100
+ - 3s - loss: 7.1270e-06
+Epoch 21/100
+ - 3s - loss: 7.3068e-06
+Epoch 22/100
+ - 3s - loss: 7.2726e-06
+Epoch 23/100
+ - 3s - loss: 7.0343e-06
+Epoch 24/100
+ - 3s - loss: 7.2919e-06
+Epoch 25/100
+ - 3s - loss: 7.2123e-06
+Epoch 26/100
+ - 3s - loss: 7.1655e-06
+Epoch 27/100
+ - 3s - loss: 7.2983e-06
+Epoch 28/100
+ - 3s - loss: 7.3212e-06
+Epoch 29/100
+ - 3s - loss: 7.0151e-06
+Epoch 30/100
+ - 3s - loss: 7.1459e-06
+Epoch 31/100
+ - 3s - loss: 7.3170e-06
+Epoch 32/100
+ - 3s - loss: 7.0502e-06
+Epoch 33/100
+ - 3s - loss: 7.1644e-06
+Epoch 34/100
+ - 3s - loss: 7.3241e-06
+Epoch 35/100
+ - 3s - loss: 7.0636e-06
+Epoch 36/100
+ - 3s - loss: 7.1353e-06
+Epoch 37/100
+ - 3s - loss: 7.0890e-06
+Epoch 38/100
+ - 3s - loss: 7.0850e-06
+Epoch 39/100
+ - 3s - loss: 7.4567e-06
+Epoch 40/100
+ - 3s - loss: 7.1594e-06
+Epoch 41/100
+ - 3s - loss: 7.4497e-06
+Epoch 42/100
+ - 3s - loss: 7.2288e-06
+Epoch 43/100
+ - 3s - loss: 7.1566e-06
+Epoch 44/100
+ - 3s - loss: 7.0184e-06
+Epoch 45/100
+ - 3s - loss: 7.1183e-06
+Epoch 46/100
+ - 3s - loss: 7.0813e-06
+Epoch 47/100
+ - 3s - loss: 7.4876e-06
+Epoch 48/100
+ - 3s - loss: 7.1962e-06
+Epoch 49/100
+ - 3s - loss: 7.0785e-06
+Epoch 50/100
+ - 3s - loss: 7.2543e-06
+Epoch 51/100
+ - 3s - loss: 7.5482e-06
+Epoch 52/100
+ - 3s - loss: 7.3237e-06
+Epoch 53/100
+ - 3s - loss: 7.1732e-06
+Epoch 54/100
+ - 3s - loss: 7.2103e-06
+Epoch 55/100
+ - 3s - loss: 7.1412e-06
+Epoch 56/100
+ - 3s - loss: 7.0818e-06
+Epoch 57/100
+ - 3s - loss: 7.1651e-06
+Epoch 58/100
+ - 3s - loss: 7.3736e-06
+Epoch 59/100
+ - 3s - loss: 7.2657e-06
+Epoch 60/100
+ - 3s - loss: 7.1009e-06
+Epoch 61/100
+ - 3s - loss: 7.0788e-06
+Epoch 62/100
+ - 3s - loss: 7.4068e-06
+Epoch 63/100
+ - 3s - loss: 7.1484e-06
+Epoch 64/100
+ - 3s - loss: 7.0607e-06
+Epoch 65/100
+ - 3s - loss: 7.1294e-06
+Epoch 66/100
+ - 3s - loss: 6.9932e-06
+Epoch 67/100
+ - 3s - loss: 7.0202e-06
+Epoch 68/100
+ - 3s - loss: 7.0110e-06
+Epoch 69/100
+ - 3s - loss: 7.0124e-06
+Epoch 70/100
+ - 3s - loss: 7.3657e-06
+Epoch 71/100
+ - 3s - loss: 7.1526e-06
+Epoch 72/100
+ - 3s - loss: 7.5195e-06
+Epoch 73/100
+ - 3s - loss: 7.0888e-06
+Epoch 74/100
+ - 3s - loss: 7.2696e-06
+Epoch 75/100
+ - 3s - loss: 7.4124e-06
+Epoch 76/100
+ - 3s - loss: 7.3336e-06
+Epoch 77/100
+ - 3s - loss: 7.0498e-06
+Epoch 78/100
+ - 3s - loss: 7.1400e-06
+Epoch 79/100
+ - 3s - loss: 7.3636e-06
+Epoch 80/100
+ - 3s - loss: 6.9624e-06
+Epoch 81/100
+ - 3s - loss: 7.2320e-06
+Epoch 82/100
+ - 3s - loss: 7.0062e-06
+Epoch 83/100
+ - 3s - loss: 7.5071e-06
+Epoch 84/100
+ - 3s - loss: 7.0244e-06
+Epoch 85/100
+ - 3s - loss: 7.0181e-06
+Epoch 86/100
+ - 3s - loss: 7.3964e-06
+Epoch 87/100
+ - 3s - loss: 7.2256e-06
+Epoch 88/100
+ - 3s - loss: 7.1229e-06
+Epoch 89/100
+ - 3s - loss: 7.2130e-06
+Epoch 90/100
+ - 3s - loss: 6.9298e-06
+Epoch 91/100
+ - 3s - loss: 7.2871e-06
+Epoch 92/100
+ - 3s - loss: 7.0991e-06
+Epoch 93/100
+ - 3s - loss: 6.9822e-06
+Epoch 94/100
+ - 3s - loss: 7.1159e-06
+Epoch 95/100
+ - 3s - loss: 7.1263e-06
+Epoch 96/100
+ - 3s - loss: 6.9959e-06
+Epoch 97/100
+ - 3s - loss: 7.0261e-06
+Epoch 98/100
+ - 3s - loss: 7.1717e-06
+Epoch 99/100
+ - 3s - loss: 7.0767e-06
+Epoch 100/100
+ - 3s - loss: 7.5523e-06
+/home/irm13002/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+2
+[2720.933, 2687.608, 2654.2478]

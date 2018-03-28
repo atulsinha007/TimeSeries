@@ -1,0 +1,16 @@
+Following are the steps required to run lstm(variant):
+1. Get into the directory having code file and make sure the .csv file containing the data is in same directory.
+2.In line 37 of the code specify the csv and column number that you wish for forecasting.
+3. line 59 of code has a variable nop(number of predictions). You can change this varable in accordance with the number of values you want to predict.
+4.The last line(152) of the code saves the graph. You can change the heading. The graph will be stored in the same folder.
+5. Run the command python3 xyz.py
+	where 'xyz' is the model you wish to run.
+
+Requirements:-
+Libraries:-
+numpy
+matplotlib
+pandas
+math
+keras
+sklearn.metrics 	
