@@ -1,0 +1,2 @@
+Train Score: 241.68 RMSE
+Test Score: 272.46 RMSE

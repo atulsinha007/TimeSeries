@@ -184,8 +184,6 @@ for i in range(nop):
 
 	futureElements.append(trainPredict[-1][0])
 	
-	
-
 
 print(futureElements)
 

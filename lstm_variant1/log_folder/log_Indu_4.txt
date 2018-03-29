@@ -1,0 +1,6 @@
+Train Score: 10.25 RMSE
+validation Score: 122.73 RMSE
+Train Score: 10.29 RMSE
+validation Score: 105.15 RMSE
+Train Score: 10.29 RMSE
+validation Score: 105.11 RMSE
